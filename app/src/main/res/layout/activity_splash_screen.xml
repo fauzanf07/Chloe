@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:text="PetaniTim"
         android:gravity="center"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="25sp"/>
 </RelativeLayout>
