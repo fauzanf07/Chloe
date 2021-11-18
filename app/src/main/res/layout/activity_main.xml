@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white_bg"
     tools:context=".Activity.MainActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -36,7 +38,122 @@
         </LinearLayout>
 
     </androidx.appcompat.widget.Toolbar>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo_polos"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="140dp"/>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="300sp">
+            <TableRow
+                android:gravity="center">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="170sp"
+                    android:layout_height="100sp"
+                    app:cardCornerRadius="10dp"
+                    android:layout_margin="5sp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/dark_green"/>
+                    <ImageView
+                        android:layout_width="120sp"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_marginLeft="10sp"
+                        android:layout_marginTop="5sp"
+                        android:src="@drawable/outdoor_daun"/>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="170sp"
+                    android:layout_height="100sp"
+                    app:cardCornerRadius="10dp"
+                    android:layout_margin="5sp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/dark_green"/>
+                    <ImageView
+                        android:layout_width="120sp"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_marginLeft="20sp"
+                        android:layout_marginTop="5sp"
+                        android:src="@drawable/outdoor_bunga"/>
+
+                </androidx.cardview.widget.CardView>
+            </TableRow>
+
+            <TableRow
+                android:gravity="center">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="170sp"
+                    android:layout_height="100sp"
+                    app:cardCornerRadius="10dp"
+                    android:layout_margin="5sp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/dark_green"/>
+                    <ImageView
+                        android:layout_width="90sp"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_marginTop="5sp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/indoor_daun"/>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="170sp"
+                    android:layout_height="100sp"
+                    app:cardCornerRadius="10dp"
+                    android:layout_margin="5sp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/dark_green"/>
+                    <ImageView
+                        android:layout_width="90sp"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_marginTop="5sp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/indoor_bunga"/>
+
+                </androidx.cardview.widget.CardView>
+            </TableRow>
+        </TableLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PataniTim"
+            android:background="@color/dark_green"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/white"
+            android:paddingBottom="5sp"
+            android:paddingTop="5sp"/>
+
+    </RelativeLayout>
 
 
 
-</RelativeLayout>
+</LinearLayout>
