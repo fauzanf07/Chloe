@@ -25,15 +25,18 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Chloe"
+                android:text="C h l o e"
                 android:textColor="@color/white"
-                android:layout_centerVertical="true"
+                android:textSize="14sp"
+                android:layout_marginTop="5dp"
                 android:layout_gravity="center_vertical"
-                android:fontFamily=""/>
+                android:fontFamily="@font/baloo2_regular"/>
 
 
         </LinearLayout>
 
     </androidx.appcompat.widget.Toolbar>
+
+
 
 </RelativeLayout>
