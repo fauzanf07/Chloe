@@ -62,7 +62,8 @@
                     android:layout_width="170sp"
                     android:layout_height="100sp"
                     app:cardCornerRadius="10dp"
-                    android:layout_margin="5sp">
+                    android:layout_margin="5sp"
+                    android:id="@+id/outdoor_daun">
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -105,7 +106,8 @@
                     android:layout_width="170sp"
                     android:layout_height="100sp"
                     app:cardCornerRadius="10dp"
-                    android:layout_margin="5sp">
+                    android:layout_margin="5sp"
+                    android:id="@+id/indoor_daun">
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
