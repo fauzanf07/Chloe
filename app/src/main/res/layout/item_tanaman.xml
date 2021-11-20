@@ -5,9 +5,10 @@
     android:padding="15dp"
     android:background="@color/white_bg"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_marginBottom="20dp">
+    android:layout_marginBottom="10dp">
 
     <ImageView
+        android:id="@+id/img_thumb"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
@@ -20,12 +21,14 @@
         android:paddingRight="10sp"
         android:orientation="vertical">
         <TextView
+            android:id="@+id/nama_tanaman"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:text="Nama Tanaman"
             android:textSize="15dp"/>
         <TextView
+            android:id="@+id/deskripsi_tanaman"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10sp"
