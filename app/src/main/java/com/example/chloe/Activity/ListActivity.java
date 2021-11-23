@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.example.chloe.Adapter.ListPlantsAdapter;
 import com.example.chloe.Model.GetPlants;
@@ -24,6 +26,7 @@ public class ListActivity extends AppCompatActivity {
     ApiInterface mApiInterface;
     private RecyclerView mRecycleView;
     private RecyclerView.LayoutManager mLayoutManager;
+    public static final  String EXTRA_KATEGORI = "extra_kategori";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +44,7 @@ public class ListActivity extends AppCompatActivity {
     }
 
     public void data(){
-        Call<GetPlants> PlantsCall = mApiInterface.getPlants("get_plants_indoor_daun");
+        Call<GetPlants> PlantsCall = mApiInterface.getPlants("get_plants_"+getIntent().getStringExtra(EXTRA_KATEGORI));
         PlantsCall.enqueue(new Callback<GetPlants>() {
             @Override
             public void onResponse(Call<GetPlants> call, Response<GetPlants> response) {
@@ -50,7 +53,12 @@ public class ListActivity extends AppCompatActivity {
                         String.valueOf(listPlants.size()));
                 ListPlantsAdapter listPlantsAdapter = new ListPlantsAdapter(listPlants);
                 mRecycleView.setAdapter(listPlantsAdapter);
-
+                listPlantsAdapter.setOnItemCallBack(new ListPlantsAdapter.OnItemCallBack() {
+                    @Override
+                    public void onItemClicked(Plants data) {
+                        showSelectedData(data);
+                    }
+                });
             }
 
             @Override
@@ -58,5 +66,13 @@ public class ListActivity extends AppCompatActivity {
                 Log.e("Retrofit Get", t.toString());
             }
         });
+    }
+
+    public void showSelectedData(Plants data){
+        Intent kirimData = new Intent(ListActivity.this,MenuPilihan.class);
+        kirimData.putExtra(MenuPilihan.EXTRA_NAMA,data.getNama());
+        kirimData.putExtra(MenuPilihan.EXTRA_DESKRIPSI,data.getDeskripsi());
+        kirimData.putExtra(MenuPilihan.EXTRA_IMGPOSTER,data.getImg_detail());
+        startActivity(kirimData);
     }
 }

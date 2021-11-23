@@ -17,20 +17,21 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <ImageView
-                android:layout_width="40dp"
+                android:layout_width="@dimen/_30sdp"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
                 android:scaleType="centerCrop"
                 android:src="@drawable/logo_polos"
                 android:layout_gravity="center_vertical"
                 />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="C h l o e"
                 android:textColor="@color/white"
-                android:textSize="14sp"
-                android:layout_marginTop="5dp"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:layout_gravity="center_vertical"
                 android:fontFamily="@font/baloo2_regular"/>
 
@@ -43,77 +44,79 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <ImageView
-            android:layout_width="100dp"
+            android:layout_width="@dimen/_90sdp"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
             android:src="@drawable/logo_polos"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="140dp"/>
+            android:layout_marginTop="@dimen/_60sdp"/>
 
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="300sp">
+            android:layout_marginTop="@dimen/_210sdp">
             <TableRow
                 android:gravity="center">
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="170sp"
-                    android:layout_height="100sp"
-                    app:cardCornerRadius="10dp"
-                    android:layout_margin="5sp"
+                    android:layout_width="@dimen/_140sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    android:layout_margin="@dimen/_5sdp"
                     android:id="@+id/outdoor_daun">
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/dark_green"/>
                     <ImageView
-                        android:layout_width="120sp"
+                        android:layout_width="@dimen/_90sdp"
                         android:layout_height="wrap_content"
                         android:adjustViewBounds="true"
                         android:scaleType="centerCrop"
-                        android:layout_marginLeft="10sp"
-                        android:layout_marginTop="5sp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
                         android:src="@drawable/outdoor_daun"/>
 
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
-                    android:layout_width="170sp"
-                    android:layout_height="100sp"
-                    app:cardCornerRadius="10dp"
-                    android:layout_margin="5sp">
+                    android:layout_width="@dimen/_140sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    android:layout_margin="@dimen/_6sdp"
+                    android:id="@+id/outdoor_bunga">
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/dark_green"/>
                     <ImageView
-                        android:layout_width="120sp"
+                        android:layout_width="@dimen/_90sdp"
                         android:layout_height="wrap_content"
                         android:adjustViewBounds="true"
                         android:scaleType="centerCrop"
-                        android:layout_marginLeft="20sp"
-                        android:layout_marginTop="5sp"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
                         android:src="@drawable/outdoor_bunga"/>
 
                 </androidx.cardview.widget.CardView>
+
             </TableRow>
 
             <TableRow
                 android:gravity="center">
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="170sp"
-                    android:layout_height="100sp"
-                    app:cardCornerRadius="10dp"
-                    android:layout_margin="5sp"
+                    android:layout_width="@dimen/_130sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    android:layout_margin="@dimen/_5sdp"
                     android:id="@+id/indoor_daun">
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/dark_green"/>
                     <ImageView
-                        android:layout_width="90sp"
+                        android:layout_width="@dimen/_70sdp"
                         android:layout_height="wrap_content"
                         android:adjustViewBounds="true"
                         android:scaleType="centerCrop"
@@ -123,20 +126,21 @@
 
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
-                    android:layout_width="170sp"
-                    android:layout_height="100sp"
-                    app:cardCornerRadius="10dp"
-                    android:layout_margin="5sp">
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    android:layout_margin="5sp"
+                    android:id="@+id/indoor_bunga">
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/dark_green"/>
                     <ImageView
-                        android:layout_width="90sp"
+                        android:layout_width="@dimen/_70sdp"
                         android:layout_height="wrap_content"
                         android:adjustViewBounds="true"
                         android:scaleType="centerCrop"
-                        android:layout_marginTop="5sp"
+                        android:layout_marginTop="@dimen/_5sdp"
                         android:layout_gravity="center"
                         android:src="@drawable/indoor_bunga"/>
 
@@ -151,8 +155,8 @@
             android:gravity="center"
             android:layout_alignParentBottom="true"
             android:textColor="@color/white"
-            android:paddingBottom="5sp"
-            android:paddingTop="5sp"/>
+            android:paddingBottom="@dimen/_5sdp"
+            android:paddingTop="@dimen/_5sdp"/>
 
     </RelativeLayout>
 

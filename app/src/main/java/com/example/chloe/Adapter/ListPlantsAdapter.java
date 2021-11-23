@@ -1,5 +1,6 @@
 package com.example.chloe.Adapter;
 
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,14 +45,14 @@ public class ListPlantsAdapter extends RecyclerView.Adapter<ListPlantsAdapter.Li
                 .apply(new RequestOptions().override(100,150))
                 .into(holder.imgPhoto);
         holder.tvNama.setText(listPlants.get(position).getNama());
-        holder.tvDeskripsi.setText(listPlants.get(position).getDeskripsi());
+        holder.tvDeskripsi.setText(Html.fromHtml(readMore(listPlants.get(position).getDeskripsi())+"<font color='#9DAD7F'>Read More</font>"));
 
-//        holder.itemView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                onItemCallBack.onItemClicked(listPlants.get(holder.getAdapterPosition()));
-//            }
-//        });
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onItemCallBack.onItemClicked(listPlants.get(holder.getAdapterPosition()));
+            }
+        });
     }
 
     @Override
@@ -59,6 +60,12 @@ public class ListPlantsAdapter extends RecyclerView.Adapter<ListPlantsAdapter.Li
         return listPlants.size();
     }
 
+    public String readMore(String text){
+        if(text.length()>200){
+            text = text.substring(0,200)+"...";
+        }
+        return text;
+    }
     public class ListViewHolder extends RecyclerView.ViewHolder {
         ImageView imgPhoto;
         TextView tvNama, tvDeskripsi;
@@ -70,7 +77,7 @@ public class ListPlantsAdapter extends RecyclerView.Adapter<ListPlantsAdapter.Li
         }
     }
 
-    private interface OnItemCallBack {
+    public interface OnItemCallBack {
         void onItemClicked(Plants data);
     }
 }

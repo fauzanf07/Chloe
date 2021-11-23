@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.chloe" >
-    <uses-permission android:name="android.permission.INTERNET"/>
+    package="com.example.chloe">
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,9 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Chloe">
         <activity
-            android:name=".Activity.ListActivity"
+            android:name=".Activity.MenuPilihan"
             android:exported="false"
             android:theme="@style/Theme.Chloe.Light.Green"/>
+        <activity
+            android:name=".Activity.ListActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Chloe.Light.Green" />
         <activity
             android:name=".Activity.MainActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
@@ -21,7 +26,7 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".Splash.SplashScreen"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

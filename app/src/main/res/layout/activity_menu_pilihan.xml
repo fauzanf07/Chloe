@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MenuPilihan"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/light_green">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/logo_polos"
+                android:layout_gravity="center_vertical"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C h l o e"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/baloo2_regular"/>
+
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/img_poster"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_242sdp"
+                    android:scaleType="centerCrop"
+                    tools:src="@tools:sample/backgrounds/scenic" />
+                <TextView
+                    android:id="@+id/deskripsi_lengkap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp"
+                    android:text="Deskripsi Lengkap"
+                    android:layout_marginBottom="@dimen/_80sdp"
+                    android:justificationMode="inter_word"/>
+            </LinearLayout>
+        </ScrollView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/open_pil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white_bg"
+                android:layout_gravity="bottom"
+                app:contentPaddingBottom="40dp"
+                app:contentPaddingLeft="@dimen/_5sdp"
+                app:contentPaddingRight="@dimen/_5sdp"
+                app:cardCornerRadius="@dimen/_15sdp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/plant_name_click"
+                        android:layout_width="@dimen/_280sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:padding="@dimen/_5sdp"
+                        android:text="Nama Tanaman"
+                        android:textColor="@color/dark_green"
+                        android:textSize="@dimen/_14sdp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginRight="@dimen/_6sdp"
+                        android:src="@drawable/arrow_up" />
+                </RelativeLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/pil"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_330sdp"
+                android:layout_gravity="bottom"
+                app:cardCornerRadius="@dimen/_15sdp"
+                app:cardBackgroundColor="@color/white_bg">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    android:background="@color/white_bg">
+                    <ImageView
+                        android:id="@+id/close_pil"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:src="@drawable/arrow_down"
+                        android:layout_gravity="right"/>
+                    <TextView
+                        android:id="@+id/plant_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nama Tanaman"
+                        android:gravity="center"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark_green"
+                        android:paddingTop="@dimen/_4sdp"
+                        android:padding="@dimen/_4sdp"/>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="@dimen/_250sdp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/dark_green"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_13sdp"
+                        app:cardCornerRadius="@dimen/_8sdp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Cara Merawat"
+                            android:background="@color/dark_green"
+                            android:textColor="@color/white_bg"
+                            android:gravity="center"
+                            android:textSize="@dimen/_14sdp"
+                            android:textStyle="bold"
+                            android:paddingTop="@dimen/_10sdp"
+                            android:paddingBottom="@dimen/_10sdp"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="@dimen/_250sdp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/dark_green"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_13sdp"
+                        app:cardCornerRadius="@dimen/_8sdp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Budidaya"
+                            android:background="@color/dark_green"
+                            android:textColor="@color/white_bg"
+                            android:gravity="center"
+                            android:textSize="@dimen/_14sdp"
+                            android:textStyle="bold"
+                            android:paddingTop="@dimen/_10sdp"
+                            android:paddingBottom="@dimen/_10sdp"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="@dimen/_250sdp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/dark_green"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_13sdp"
+                        app:cardCornerRadius="@dimen/_8sdp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Fakta"
+                            android:background="@color/dark_green"
+                            android:textColor="@color/white_bg"
+                            android:gravity="center"
+                            android:textSize="@dimen/_14sdp"
+                            android:textStyle="bold"
+                            android:paddingTop="@dimen/_10sdp"
+                            android:paddingBottom="@dimen/_10sdp"/>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="@dimen/_250sdp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/dark_green"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_13sdp"
+                        app:cardCornerRadius="@dimen/_8sdp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Beli Produk"
+                            android:background="@color/dark_green"
+                            android:textColor="@color/white_bg"
+                            android:gravity="center"
+                            android:textSize="@dimen/_14sdp"
+                            android:textStyle="bold"
+                            android:paddingTop="@dimen/_10sdp"
+                            android:paddingBottom="@dimen/_10sdp"/>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/light_green"
+            android:textColor="@color/white_bg"
+            android:text="PetaniTim"
+            android:gravity="center"
+            android:elevation="2dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"/>
+
+
+    </FrameLayout>
+
+</LinearLayout>
