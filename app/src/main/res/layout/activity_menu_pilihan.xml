@@ -144,6 +144,7 @@
                         app:cardCornerRadius="@dimen/_8sdp">
 
                         <TextView
+                            android:id="@+id/caraMerawat"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Cara Merawat"

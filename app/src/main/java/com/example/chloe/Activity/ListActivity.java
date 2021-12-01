@@ -73,6 +73,10 @@ public class ListActivity extends AppCompatActivity {
         kirimData.putExtra(MenuPilihan.EXTRA_NAMA,data.getNama());
         kirimData.putExtra(MenuPilihan.EXTRA_DESKRIPSI,data.getDeskripsi());
         kirimData.putExtra(MenuPilihan.EXTRA_IMGPOSTER,data.getImg_detail());
+        kirimData.putExtra(MenuPilihan.EXTRA_CARA_MERAWAT,data.getCara_merawat());
+        kirimData.putExtra(MenuPilihan.EXTRA_BUDIDAYA,data.getBudidaya());
+        kirimData.putExtra(MenuPilihan.EXTRA_FAKTA,data.getFakta());
+        kirimData.putExtra(MenuPilihan.EXTRA_REKOMENDASI,data.getRekomendasi());
         startActivity(kirimData);
     }
 }

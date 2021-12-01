@@ -15,6 +15,14 @@ public class Plants {
     public String img_detail;
     @SerializedName("kategori")
     public String kategori;
+    @SerializedName("cara_merawat")
+    public String cara_merawat;
+    @SerializedName("budidaya")
+    public String budidaya;
+    @SerializedName("fakta")
+    public String fakta;
+    @SerializedName("rekomendasi")
+    public String rekomendasi;
 
     public String getId() {
         return id;
@@ -62,5 +70,37 @@ public class Plants {
 
     public void setKategori(String kategori) {
         this.kategori = kategori;
+    }
+
+    public String getCara_merawat() {
+        return cara_merawat;
+    }
+
+    public void setCara_merawat(String cara_merawat) {
+        this.cara_merawat = cara_merawat;
+    }
+
+    public String getBudidaya() {
+        return budidaya;
+    }
+
+    public void setBudidaya(String budidaya) {
+        this.budidaya = budidaya;
+    }
+
+    public String getFakta() {
+        return fakta;
+    }
+
+    public void setFakta(String fakta) {
+        this.fakta = fakta;
+    }
+
+    public String getRekomendasi() {
+        return rekomendasi;
+    }
+
+    public void setRekomendasi(String rekomendasi) {
+        this.rekomendasi = rekomendasi;
     }
 }
