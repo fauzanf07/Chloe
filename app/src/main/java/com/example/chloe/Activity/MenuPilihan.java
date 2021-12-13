@@ -25,7 +25,7 @@ public class MenuPilihan extends AppCompatActivity implements View.OnClickListen
     public static final String EXTRA_FAKTA = "extra_fakta";
     public static final String EXTRA_REKOMENDASI = "extra_rekomendasi";
     private boolean openPilClick, pilClick;
-    TextView tvName, tvNameClick, deskripsiLengkap, caraMerawat;
+    TextView tvName, tvNameClick, deskripsiLengkap, caraMerawat, budidaya;
     ImageView imgView, close_pil;
     MaterialCardView open_pil;
     CardView pil;
@@ -45,8 +45,12 @@ public class MenuPilihan extends AppCompatActivity implements View.OnClickListen
         open_pil = findViewById(R.id.open_pil);
         close_pil = findViewById(R.id.close_pil);
         pil = findViewById(R.id.pil);
-        caraMerawat = findViewById(R.id.caraMerawat);
         pil.setVisibility(View.GONE);
+
+
+        caraMerawat = findViewById(R.id.caraMerawat);
+        budidaya = findViewById(R.id.budidaya);
+
 
         String nama = getIntent().getStringExtra(EXTRA_NAMA);
         String imgPoster = getIntent().getStringExtra(EXTRA_IMGPOSTER);
@@ -62,6 +66,7 @@ public class MenuPilihan extends AppCompatActivity implements View.OnClickListen
         open_pil.setOnClickListener(this);
         close_pil.setOnClickListener(this);
         caraMerawat.setOnClickListener(this);
+        budidaya.setOnClickListener(this);
     }
 
     public void slideUp(View v){
@@ -109,6 +114,12 @@ public class MenuPilihan extends AppCompatActivity implements View.OnClickListen
             Intent alihkan = new Intent(MenuPilihan.this, DetailPilihan.class);
             alihkan.putExtra(DetailPilihan.EXTRA_LINK, getIntent().getStringExtra(EXTRA_CARA_MERAWAT));
             alihkan.putExtra(DetailPilihan.EXTRA_PILIHAN,"Cara Merawat");
+            startActivity(alihkan);
+        }
+        if(v.getId() == R.id.budidaya){
+            Intent alihkan = new Intent(MenuPilihan.this, DetailPilihan.class);
+            alihkan.putExtra(DetailPilihan.EXTRA_LINK, getIntent().getStringExtra(EXTRA_BUDIDAYA));
+            alihkan.putExtra(DetailPilihan.EXTRA_PILIHAN,"Budidaya");
             startActivity(alihkan);
         }
     }
