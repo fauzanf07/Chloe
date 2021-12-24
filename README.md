@@ -1,2 +1,2 @@
 # Chloe
-Tugas Besar Mobile Programming
+Mobile App for helping people to take care of and cultivate ornamental-plants
