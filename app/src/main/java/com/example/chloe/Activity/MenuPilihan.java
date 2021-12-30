@@ -25,7 +25,7 @@ public class MenuPilihan extends AppCompatActivity implements View.OnClickListen
     public static final String EXTRA_FAKTA = "extra_fakta";
     public static final String EXTRA_REKOMENDASI = "extra_rekomendasi";
     private boolean openPilClick, pilClick;
-    TextView tvName, tvNameClick, deskripsiLengkap, caraMerawat, budidaya;
+    TextView tvName, tvNameClick, deskripsiLengkap, caraMerawat, budidaya,fakta,rekomendasi;
     ImageView imgView, close_pil;
     MaterialCardView open_pil;
     CardView pil;
@@ -50,6 +50,9 @@ public class MenuPilihan extends AppCompatActivity implements View.OnClickListen
 
         caraMerawat = findViewById(R.id.caraMerawat);
         budidaya = findViewById(R.id.budidaya);
+        fakta = findViewById(R.id.fakta);
+        rekomendasi = findViewById(R.id.rekomendasi);
+
 
 
         String nama = getIntent().getStringExtra(EXTRA_NAMA);
@@ -67,6 +70,8 @@ public class MenuPilihan extends AppCompatActivity implements View.OnClickListen
         close_pil.setOnClickListener(this);
         caraMerawat.setOnClickListener(this);
         budidaya.setOnClickListener(this);
+        fakta.setOnClickListener(this);
+        rekomendasi.setOnClickListener(this);
     }
 
     public void slideUp(View v){
@@ -120,6 +125,18 @@ public class MenuPilihan extends AppCompatActivity implements View.OnClickListen
             Intent alihkan = new Intent(MenuPilihan.this, DetailPilihan.class);
             alihkan.putExtra(DetailPilihan.EXTRA_LINK, getIntent().getStringExtra(EXTRA_BUDIDAYA));
             alihkan.putExtra(DetailPilihan.EXTRA_PILIHAN,"Budidaya");
+            startActivity(alihkan);
+        }
+        if(v.getId() == R.id.fakta){
+            Intent alihkan = new Intent(MenuPilihan.this, DetailPilihan.class);
+            alihkan.putExtra(DetailPilihan.EXTRA_LINK, getIntent().getStringExtra(EXTRA_FAKTA));
+            alihkan.putExtra(DetailPilihan.EXTRA_PILIHAN,"Fakta");
+            startActivity(alihkan);
+        }
+        if(v.getId() == R.id.rekomendasi){
+            Intent alihkan = new Intent(MenuPilihan.this, DetailPilihan.class);
+            alihkan.putExtra(DetailPilihan.EXTRA_LINK, getIntent().getStringExtra(EXTRA_REKOMENDASI));
+            alihkan.putExtra(DetailPilihan.EXTRA_PILIHAN,"Rekomendasi");
             startActivity(alihkan);
         }
     }

@@ -23,14 +23,12 @@ public class DetailPilihan extends AppCompatActivity {
         getSupportActionBar().hide();
         tvDetail = findViewById(R.id.detail);
 
+        tvDetail.setText(getIntent().getStringExtra(EXTRA_PILIHAN));
+        WebView myWebView = (WebView) findViewById(R.id.webView);
+        myWebView.setWebViewClient(new WebViewClient());
+        myWebView.setWebChromeClient(new WebChromeClient());
+        myWebView.getSettings().setJavaScriptEnabled(true);
+        myWebView.loadUrl(Config.WEB_URL+getIntent().getStringExtra(EXTRA_LINK));
 
-        if(!getIntent().getStringExtra(EXTRA_PILIHAN).equals("FAKTA")){
-            tvDetail.setText(getIntent().getStringExtra(EXTRA_PILIHAN));
-            WebView myWebView = (WebView) findViewById(R.id.webView);
-            myWebView.setWebViewClient(new WebViewClient());
-            myWebView.setWebChromeClient(new WebChromeClient());
-            myWebView.getSettings().setJavaScriptEnabled(true);
-            myWebView.loadUrl(Config.WEB_URL+getIntent().getStringExtra(EXTRA_LINK));
-        }
     }
 }

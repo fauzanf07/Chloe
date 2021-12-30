@@ -186,6 +186,7 @@
                         android:layout_marginTop="@dimen/_13sdp"
                         app:cardCornerRadius="@dimen/_8sdp">
                         <TextView
+                            android:id="@+id/fakta"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Fakta"
@@ -205,6 +206,7 @@
                         android:layout_marginTop="@dimen/_13sdp"
                         app:cardCornerRadius="@dimen/_8sdp">
                         <TextView
+                            android:id="@+id/rekomendasi"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Beli Produk"
