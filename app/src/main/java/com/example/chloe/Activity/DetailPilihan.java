@@ -3,6 +3,7 @@ package com.example.chloe.Activity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -14,7 +15,7 @@ import com.example.chloe.R;
 public class DetailPilihan extends AppCompatActivity {
     public  static  final String EXTRA_LINK = "ekstra_link";
     public  static  final String EXTRA_PILIHAN = "ekstra_pilihan";
-    public TextView tvDetail;
+    public TextView tvDetail,tvPataniTim;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +23,11 @@ public class DetailPilihan extends AppCompatActivity {
         setContentView(R.layout.activity_detail_pilihan);
         getSupportActionBar().hide();
         tvDetail = findViewById(R.id.detail);
+        tvPataniTim = findViewById(R.id.patani_tim);
 
+        if(getIntent().getStringExtra(EXTRA_PILIHAN).equalsIgnoreCase("rekomendasi")){
+            tvPataniTim.setVisibility(View.GONE);
+        }
         tvDetail.setText(getIntent().getStringExtra(EXTRA_PILIHAN));
         WebView myWebView = (WebView) findViewById(R.id.webView);
         myWebView.setWebViewClient(new WebViewClient());
