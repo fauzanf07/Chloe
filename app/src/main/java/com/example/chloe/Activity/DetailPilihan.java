@@ -2,8 +2,12 @@ package com.example.chloe.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.URLUtil;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -34,6 +38,32 @@ public class DetailPilihan extends AppCompatActivity {
         myWebView.setWebChromeClient(new WebChromeClient());
         myWebView.getSettings().setJavaScriptEnabled(true);
         myWebView.loadUrl(Config.WEB_URL+getIntent().getStringExtra(EXTRA_LINK));
+        myWebView.setWebViewClient(new WebViewClient() {
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                if( URLUtil.isNetworkUrl(url) ) {
+                    return false;
+                }
+                if (appInstalledOrNot(url)) {
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                    startActivity( intent );
+                } else {
+                    // do something if app is not installed
+                }
+                return true;
+            }
 
+        });
     }
+    private boolean appInstalledOrNot(String uri) {
+        PackageManager pm = getPackageManager();
+        try {
+            pm.getPackageInfo(uri, PackageManager.GET_ACTIVITIES);
+            return true;
+        } catch (PackageManager.NameNotFoundException e) {
+        }
+
+        return false;
+    }
+
 }
