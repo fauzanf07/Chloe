@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.chloe">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -14,8 +15,16 @@
         android:hardwareAccelerated="true">
         <activity
             android:name=".Activity.DetailPilihan"
-            android:exported="false"
-            android:theme="@style/Theme.Chloe.Light.Green"/>
+            android:exported="true"
+            android:theme="@style/Theme.Chloe.Light.Green">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="shopeeid" />
+                <data android:scheme="https" android:host="shopee.co.id"/>
+            </intent-filter>
+        </activity>
         <activity
             android:name=".Activity.MenuPilihan"
             android:exported="false"
