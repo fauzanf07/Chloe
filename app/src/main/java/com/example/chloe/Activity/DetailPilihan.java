@@ -32,9 +32,6 @@ public class DetailPilihan extends AppCompatActivity {
         tvDetail = findViewById(R.id.detail);
         tvPataniTim = findViewById(R.id.patani_tim);
 
-        if(getIntent().getStringExtra(EXTRA_PILIHAN).equalsIgnoreCase("rekomendasi")){
-            tvPataniTim.setVisibility(View.GONE);
-        }
         tvDetail.setText(getIntent().getStringExtra(EXTRA_PILIHAN));
         WebView myWebView = (WebView) findViewById(R.id.webView);
         myWebView.setWebViewClient(new myWebClient());
